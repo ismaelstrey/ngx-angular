@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
 import { CanActivate, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { tap, shareReplay } from 'rxjs/operators';
 import * as jwtDecode from 'jwt-decode';
 import * as moment from 'moment';
@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 export class AuthService {
 
   private apiRoot = environment.apiUrl;
+  private usuario$ = new Subject<string>();
 
   constructor(private http: HttpClient) { }
 

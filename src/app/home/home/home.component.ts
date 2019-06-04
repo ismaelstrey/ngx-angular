@@ -3,6 +3,7 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
 import { randomColor } from 'randomcolor';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { ColorService } from 'src/app/color.service';
 
 @Component({
   selector: 'app-home',
@@ -14,10 +15,11 @@ import { Store } from '@ngrx/store';
 })
 export class HomeComponent implements OnInit {
   cor = '';
-  constructor() { }
+  constructor(private service: ColorService) { }
 
   trocaCor() {
     this.cor = randomColor();
+    this.service.alterarCor(this.cor);
     localStorage.setItem('color', this.cor);
   }
 
