@@ -1,38 +1,40 @@
 <nav class="navbar navbar-expand-sm navbar-dark" [ngStyle]="{'background-color': color}">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" [routerLink]="[ '/home']">SpeedSul</a>
   <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
     aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
   <div class="collapse navbar-collapse" id="collapsibleNavId">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="[ '/home']">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
+          
+      <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="[ '/servicos']">Serviços</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="[ '/produtos']">Produtos</a>
 
       </li>
-      <li class="nav-item">
+      <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="[ '/sobre']">Sobre</a>
 
       </li>
-      <li class="nav-item">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="[ '/mapas']">mapas</a>
+
+      </li>
+      <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="[ '/login']">Login</a>
 
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">{{color$ | async}}</a>
+          aria-expanded="false"></a>
         <div class="dropdown-menu" aria-labelledby="dropdownId">
           <a class="dropdown-item" href="#">Action 2</a>
         </div>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="text" placeholder="O quê você está procurando?">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisa</button>
     </form>
   </div>
 </nav>

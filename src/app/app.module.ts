@@ -26,9 +26,13 @@ import { SobreComponent } from './empresa/sobre/sobre.component';
 import { PadraoComponent } from './template/padrao/padrao.component';
 import { HeaderComponent } from './template/header/header.component';
 import { LoginComponent } from './user/login/login.component';
+import { AtualizarComponent } from './user/atualizar/atualizar.component';
+import { CadastroComponent } from './user/cadastro/cadastro.component';
 import { AuthService, AuthGuard, AuthInterceptor } from './auth.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer/footer.component';
+import { MapasComponent } from './maps/mapas/mapas.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,10 @@ import { FooterComponent } from './footer/footer/footer.component';
     PadraoComponent,
     HeaderComponent,
     LoginComponent,
-    FooterComponent
+    CadastroComponent,
+    AtualizarComponent,
+    FooterComponent,
+    MapasComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +69,10 @@ import { FooterComponent } from './footer/footer/footer.component';
     RatingModule.forRoot(),
     SortableModule.forRoot(),
     TabsModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB919fmIfsV8Zimzn7GzNMdUDFuAGTDtlo'
+    })
   ],
   providers: [
     AuthService,

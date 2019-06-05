@@ -1,0 +1,13 @@
+agm-map {
+    height: 600px;
+  }
+  .description{
+    background-color:#563d7c;
+  }
+  .description_title{
+    color: #563d7c;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .title{
+    text-align: center;
+  }
