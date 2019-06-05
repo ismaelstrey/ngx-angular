@@ -7,6 +7,7 @@ import { ServicosComponent } from './servicos/servicos/servicos.component';
 import { ProdutosComponent } from './produtos/produtos/produtos.component';
 import { SobreComponent } from './empresa/sobre/sobre.component';
 import { LoginComponent } from './user/login/login.component';
+import { MapasComponent } from './maps/mapas/mapas.component';
 
 
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'produtos', component: ProdutosComponent },
   { path: 'servicos', component: ServicosComponent },
   { path: 'sobre', component: SobreComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'mapas', component: MapasComponent }
 
 
 ];

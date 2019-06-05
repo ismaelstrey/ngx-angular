@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@agm/core@^1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@agm/core/-/core-1.0.0-beta.6.tgz#89a812b4b4ceb4d9cf2195400423c4b833103c5e"
+  integrity sha512-Bf6azUVIZYwgUWUNISaENh38D17XJxgKU7m1TNTrP+sIgYjPrjEON8mxoGnYI8B7PBbdaWl6RPV/FcrEfSG9Ng==
+
 "@angular-devkit/architect@0.13.9":
   version "0.13.9"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.13.9.tgz#8bbca4b968fccbf88fc2f86542cbee09e1256e1f"
@@ -632,6 +637,13 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
+
+angular-maps@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/angular-maps/-/angular-maps-6.0.1.tgz#1ac9364bec525e9d37ce72a348e828370da29dd4"
+  integrity sha512-snqwNnWpRp7b+e1x/j3jpUMZHw1CCXFUr+afCegX10WoM2txjUJ2mooT9/7D/MFiUyoeI0UmQvk5D5d78T40lA==
+  dependencies:
+    tslib "^1.9.0"
 
 ansi-colors@^3.0.0:
   version "3.2.4"
