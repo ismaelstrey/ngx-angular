@@ -23,7 +23,16 @@ export class MapasComponent implements OnInit {
       label: '',
       draggable: false,
       title: 'Xis do Vini',
-      iconUrl: this.icon
+      iconUrl: this.icon,
+      social: {
+        facebook: 'https://facebook.com',
+        google: 'https://google.com',
+        watsapp: '(51)98175-4701',
+        fone: '(51)98175-4701',
+        email: 'https://hotmail.com',
+        twitter: 'https://hotmail.com',
+        instagram: 'https://instagran.com'
+      }
 
     },
     {
@@ -72,4 +81,5 @@ interface Marker {
   draggable: boolean;
   title?: string;
   iconUrl?: string;
+  social: any;
 }

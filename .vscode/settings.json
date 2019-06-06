@@ -1,3 +1,18 @@
 {
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "cSpell.words": [
+        "angular",
+        "build",
+        "codelyzer",
+        "devkit",
+        "jasminewd",
+        "list",
+        "ngrx",
+        "randomcolor",
+        "store",
+        "tslib",
+        "types",
+        "unstyled",
+        "watsapp"
+    ]
 }

@@ -2,12 +2,27 @@ agm-map {
     height: 600px;
   }
   .description{
-    background-color:#563d7c;
+    background-color:#801417;
+    border-radius: 20px;
   }
   .description_title{
-    color: #563d7c;
+    color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
   .title{
     text-align: center;
+    color: bisque;
+
+  }
+  .info{
+    background-color: #22192f;
+    border:#2f192f;
+    border-style: double;
+    border-radius: 20px;
+
+  }
+  .address{
+    font-size: 20;
+    margin: 30px;
+    color: azure;
   }
