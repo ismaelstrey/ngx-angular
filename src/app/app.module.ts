@@ -71,7 +71,7 @@ import { AgmCoreModule } from '@agm/core';
     TabsModule.forRoot(),
     TooltipModule.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB919fmIfsV8Zimzn7GzNMdUDFuAGTDtlo'
+      apiKey: 'AIzaSyDzVKqQxZBZcdLHF6SemzSrB572YNmnzL4'
     })
   ],
   providers: [

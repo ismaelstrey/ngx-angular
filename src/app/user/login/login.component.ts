@@ -12,13 +12,12 @@ export class LoginComponent implements OnInit {
 
   error: any;
   display = 'false';
-  
+
 
   constructor(
 
     private authService: AuthService,
-    private router: Router,
-    private location: Location
+    private router: Router
   ) {
   }
 
@@ -27,8 +26,8 @@ export class LoginComponent implements OnInit {
   login(email: string, password: string) {
     this.authService.login(email, password).subscribe(
       success => {
-        setTimeout(function () {
-          location.reload()
+        setTimeout(() => {
+          location.reload();
         }, 100);
         this.router.navigate(['']);
       },

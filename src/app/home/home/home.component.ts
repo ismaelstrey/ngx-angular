@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
 import { randomColor } from 'randomcolor';
-import { Observable } from 'rxjs';
-import { Store } from '@ngrx/store';
 import { ColorService } from 'src/app/color.service';
 
 @Component({

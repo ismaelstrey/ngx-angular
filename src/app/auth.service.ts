@@ -31,6 +31,9 @@ export class AuthService {
   get token(): string {
     return localStorage.getItem('token');
   }
+  apiUrl() {
+    return this.apiRoot;
+  }
 
   login(email: string, password: string) {
     return this.http.post(

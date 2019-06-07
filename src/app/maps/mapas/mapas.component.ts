@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
+import { Marker } from './mapas.interface';
+import { MapasService } from '../mapas.service';
 
 @Component({
   selector: 'app-mapas',
@@ -9,54 +11,28 @@ import { MouseEvent } from '@agm/core';
 export class MapasComponent implements OnInit {
 
 
-  constructor() { }
-  title = 'My first AGM project';
+  constructor(private service: MapasService) {
+    console.log(this.markers);
+  }
   lat = -29.570041;
   lng = -50.792810;
   icon = './assets/img/icons/fast_food.png';
   zoom = 14;
-
-  markers: Marker[] = [
-    {
-      lat: -29.575241,
-      lng: -50.795510,
-      label: '',
-      draggable: false,
-      title: 'Xis do Vini',
-      iconUrl: this.icon
-
-    },
-    {
-      lat: -29.504200,
-      lng: -50.794510,
-      label: '',
-      draggable: false,
-      title: 'Xis do alemao',
-      iconUrl: this.icon
-
-    },
-    {
-      lat: -29.570070,
-      lng: -50.792900,
-      label: '',
-      draggable: false,
-      title: 'Xis do Vine',
-      iconUrl: this.icon
-
-    }
-  ];
+  markers = this.service.markers;
+  
+  // markers = this.dados.markers;
 
   clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`)
   }
 
-  mapClicked($event: MouseEvent) {
-    this.markers.push({
-      lat: $event.coords.lat,
-      lng: $event.coords.lng,
-      draggable: true
-    });
-  }
+  // mapClicked($event: MouseEvent) {
+  //   this.markers.push({
+  //     lat: $event.coords.lat,
+  //     lng: $event.coords.lng,
+  //     draggable: true
+  //   });
+  // }
   markerDragEnd(m: Marker, $event: MouseEvent) {
     console.log('dragEnd', m, $event);
   }
@@ -64,12 +40,4 @@ export class MapasComponent implements OnInit {
   ngOnInit() {
   }
 
-}
-interface Marker {
-  lat: number;
-  lng: number;
-  label?: string;
-  draggable: boolean;
-  title?: string;
-  iconUrl?: string;
 }
